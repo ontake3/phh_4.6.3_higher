@@ -7,9 +7,13 @@ function arrayWalk(date, f) {
 
 //コールバック関数
 function showElement(value, key){
-    console.log(key + ':' + value);
+    console.log(key + ' : ' + value);
+}
+
+//コールバック関数
+function showDecoratedEkement(value, key) {
+    console.log ('キー(' + key +') : 値 :(' + key + ')')
 }
 
 var ary = [1, 2, 4, 8, 16];
-//arrayWalk(ary.showElement);
-ary.forEach (showElement);
+arrayWalk (ary, showDecoratedEkement);
