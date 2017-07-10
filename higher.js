@@ -1,14 +1,13 @@
 //高階関数
-function myHigerFunction (func) {
+function myHigerFunction () {
     console.log('miHigerFunction');
 
-    func();
+    return outsideFunction;
 }
 //(普通の)関数
 function outsideFunction() {
     console.log('outsideFunction')
 }
 
-outsideFunction (); //関数呼び出し
-
-myHigerFunction(outsideFunction); //関数渡し
+let returnValue = myHigerFunction();
+returnValue ();
