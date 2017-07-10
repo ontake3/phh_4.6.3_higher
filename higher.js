@@ -1,14 +1,15 @@
 //高階関数
-function myHigerFunction (func) {
-    console.log('miHigerFunction');
-
-    func();
-}
-//(普通の)関数
-function outsideFunction() {
-    console.log('outsideFunction')
+function arrayWalk(date, f) {
+    for (var key in date) {
+        f (date[key], key);
+    }
 }
 
-outsideFunction (); //関数呼び出し
+//コールバック関数
+function showElement(value, key){
+    console.log(key + ':' + value);
+}
 
-myHigerFunction(outsideFunction); //関数渡し
+var ary = [1, 2, 4, 8, 16];
+//arrayWalk(ary.showElement);
+ary.forEach (showElement);
