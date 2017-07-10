@@ -5,9 +5,11 @@ function myHigerFunction () {
     return outsideFunction;
 }
 //(普通の)関数
-function outsideFunction() {
-    console.log('outsideFunction')
+function outsideFunction(value) {
+    console.log('value :' + value);
 }
 
-let returnValue = myHigerFunction();
-returnValue ();
+//let returnValue = myHigherFunction ();
+//returnFunction ('引数だよ');
+
+myHigerFunction() ('引数だよ');
